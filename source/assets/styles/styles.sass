@@ -2,8 +2,8 @@
 
 $column: 60px
 $gutter: 20px
-$grid-columns: 5 // set this here for the visual grid
-$max-width: 30em
+$grid-columns: 9 // set this here for the visual grid
+$max-width: 100%
 // $visual-grid: true
 $visual-grid-index: front
 
@@ -74,14 +74,57 @@ $tablet: new-breakpoint(min-width 200px 3)
 
 // global defaults/resets
 
+html
+  font-family: FF-Klinic-Slab
+  font-weight: 200
+  font-size: 30px
+  color: $lightgray
+%hx
+  font-weight: 400
+h1, h2, h3, h4, h5, h6
+  @extend %hx
 a
   text-decoration: none
+.fa
+  font-size: 0.7em
+  line-height: 1.8em
+abbr.fa
+  text-decoration: none
+  border: none
+
 
 // specific base styling - mobile first
 
 body
+  background-image: url(grid.png)
   @include outer-container
 
+.name.logo
+  background-image: url(ak-logo-blue.svg)
+  background-size: contain
+  display: block
+  width: 500px
+  height: 300px
+  background-repeat: no-repeat
+  @include hide-text
+  background-position: center center
+  margin: 0 auto
+
+.nav-next
+  background-image: url(chevron-down.svg)
+  display: block
+  background-size: contain
+  width: 200px
+  height: 70px
+  background-position: center center
+  margin: 0 auto
+  @include hide-text
+
+section
+  margin: 1em auto 9em auto
+  width: 100%
+  clear: both
+  overflow: hidden
 
 @include media($tablet)
 
