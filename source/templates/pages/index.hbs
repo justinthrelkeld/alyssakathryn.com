@@ -1,3 +1,37 @@
 ---
 title: Home
+projects:
+-
+ image: 'hannah.jpg'
+ title: 'hannah'
+ description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+-
+ image: 'stainboy.jpg'
+ title: 'stain boy'
+ description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+-
+ image: 'thelettere.jpg'
+ title: 'the letter E'
+ description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+-
+ image: 'tree.jpg'
+ title: 'tree'
+ description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
 ---
+<section id="intro">
+  <p>You boys know how to shovel coal? Wow. We're just blowing through nap time, aren't we. We'll have to find something to do so that people can look at you without wanting to kill themselves. Look at us, crying like a couple of girls on the last day of camp. Either I zip down, or he zips up, and that is a mighty long zipper on Mother's Cher jumpsuit.</p>
+  <a class="nav-next" href="#projects">projects</a>
+</section>
+<section id="projects">
+  {{!-- {{> projects }} --}}
+{{#each projects}}
+  <article class="project">
+    <div class="project--info">
+      <strong class="project--title">{{this.title}}</strong>
+      <p>{{this.description}}</p>
+    </div>
+    <img src="projects/{{this.image}}" alt="" />
+  </article>
+{{/each}}
+
+</section>
