@@ -8,6 +8,7 @@ projects:
 -
  image: 'stainboy.jpg'
  title: 'stain boy'
+ url: "#"
  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
 -
  image: 'thelettere.jpg'
@@ -19,19 +20,50 @@ projects:
  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
 ---
 <section id="intro">
-  <p>You boys know how to shovel coal? Wow. We're just blowing through nap time, aren't we. We'll have to find something to do so that people can look at you without wanting to kill themselves. Look at us, crying like a couple of girls on the last day of camp. Either I zip down, or he zips up, and that is a mighty long zipper on Mother's Cher jumpsuit.</p>
-  <a class="nav-next" href="#projects">projects</a>
+  <p>My name is Alyssa Kathryn. I'm a designer and barista with a love of letters, giraffes, and going outside. I do hand lettering and illustration.</p>
+  <footer>
+    <a class="nav-next smooth" href="#projects">projects</a>
+  </footer>
 </section>
 <section id="projects">
   {{!-- {{> projects }} --}}
 {{#each projects}}
   <article class="project">
-    <div class="project--info">
-      <strong class="project--title">{{this.title}}</strong>
-      <p>{{this.description}}</p>
-    </div>
-    <img src="projects/{{this.image}}" alt="" />
+    {{#if url}}
+      <a href="{{url}}" class="project--info">
+        <strong class="project--title">{{title}}</strong>
+        <p>{{description}}</p>
+      </a>
+    {{else}}
+      <div class="project--info">
+        <strong class="project--title">{{title}}</strong>
+        <p>{{description}}</p>
+      </div>
+    {{/if}}
+    <img src="projects/{{image}}" alt="" />
   </article>
 {{/each}}
 
+</section>
+<section id="contact">
+  <ul class="social" id="social">
+    <li class="linkedin">
+      <a href="http://www.linkedin.com/profile/view?id=225078617">LinkedIn</a>
+    </li>
+    <li class="instagram">
+      <a href="http://instagram.com/_alyssakathryn">Instagram</a>
+    </li>
+    <li class="tumblr">
+      <a href="http://alyssakathrynthrelkeld.tumblr.com">Tumblr</a>
+    </li>
+    <li class="twitter">
+      <a href="http://twitter.com/_alyssakathryn">Twitter</a>
+    </li>
+    <li class="behance">
+      <a href="http://behance.net/kathrynthrelkeld">Behance</a>
+    </li>
+    <li class="facebook">
+      <a href="http://facebook.com/alyssathrelkeld">Facebook</a>
+    </li>
+  </ul>
 </section>
