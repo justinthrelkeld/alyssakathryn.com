@@ -126,6 +126,58 @@ section
   clear: both
   overflow: hidden
 
+#projects
+  text-align: center
+  padding: 0
+  margin-bottom: 3em
+  .project
+    padding: 0
+    margin: 0
+    clear: none
+    width: 33.56%
+    margin-right: -0.6%
+    margin-top: -0.2%
+    display: inline-block
+    height: auto
+    overflow: hidden
+    margin-bottom: -6px
+    background-color: black
+  img
+    width: 100%
+    padding: 0
+    margin: 0
+    display: block
+    position: relative
+    @include transition (opacity 0.3s)
+
+  .project--info
+    font-family: Arquitecta
+    position: relative
+    z-index: 10
+    width: 100%
+    background-color: rgba(0,0,30,0.1)
+    padding: 0
+    margin: 0
+    overflow: hidden
+    display: block
+    height: 100em
+    margin-bottom: -100em
+    visibility: hidden
+    color: white
+    text-shadow: 0px 0px 4px black
+    padding: 1em
+    font-size: .8em
+    .project--title
+      font-weight: 700
+
+
+
+  .project:hover
+    img
+      opacity: 0.4
+    .project--info
+      visibility: visible
+
 @include media($tablet)
 
 @include media($desktop)
