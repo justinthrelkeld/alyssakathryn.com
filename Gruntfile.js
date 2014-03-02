@@ -81,7 +81,10 @@ module.exports = function(grunt) {
           {expand: true, cwd: '<%= config.src %>/assets/styles', src: ['**', '!*.scss', '!*.sass'], dest: '<%= config.dist %>/assets/css'},
 
           // Copy any vanilla JS files included in the script source
-          {expand: true, cwd: '<%= config.src %>/assets/scripts', src: ['**', '!*.coffee'], dest: '<%= config.dist %>/assets/js'}
+          {expand: true, cwd: '<%= config.src %>/assets/scripts', src: ['**', '!*.coffee'], dest: '<%= config.dist %>/assets/js'},
+
+          // copy project images
+          {expand: true, cwd: '<%= config.src %>/content/projects/', src: ['*.jpg'], dest: '<%= config.dist %>/projects/'}
         ]
       }
     },
