@@ -2,22 +2,29 @@
 title: Home
 projects:
 -
- image: 'hannah.jpg'
- title: 'hannah'
- description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+  image: 'revjoe-menu.jpg'
+  title: 'Revielle Joe Menu'
+  url: https://www.behance.net/gallery/Reveille-Joe-Menu/14634097
 -
- image: 'stainboy.jpg'
- title: 'stain boy'
- url: "#"
- description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+  image: '323cards.jpg'
+  title: '323 Creative Group Business Cards'
+  url: https://www.behance.net/gallery/323-Creative-Group-Business-Cards/14755589
 -
- image: 'thelettere.jpg'
- title: 'the letter E'
- description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+  image: 'yardsale.jpg'
+  title: 'Community Yard Sale Poster'
+  url: https://www.behance.net/gallery/Yard-Sale-Lettering-project/13207607
 -
- image: 'tree.jpg'
- title: 'tree'
- description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, quae unde sequi sed fugit iure suscipit itaque laboriosam ipsa nam nesciunt corporis nobis repellat excepturi pariatur veritatis aut iusto qui!'
+  image: 'letters.jpg'
+  title: 'Untitled Lettering'
+  url: https://www.behance.net/gallery/Letter-Project/14966113
+-
+  image: 'kali.jpg'
+  title: 'Kalimana Photography Logo'
+  url: https://www.behance.net/gallery/Kalimana-Photography-Logo/14725373
+-
+  image: 'mouth-of-the-south.jpg'
+  title: 'Mouth of the South Logo'
+  url: https://www.behance.net/gallery/Mouth-of-the-South-Logo/14456127
 ---
 <section id="intro">
   <p>My name is Alyssa Kathryn. I'm a designer and barista with a love of letters, giraffes, and going outside. I do hand lettering and illustration.</p>
@@ -30,7 +37,7 @@ projects:
 {{#each projects}}
   <article class="project">
     {{#if url}}
-      <a href="{{url}}" class="project--info">
+      <a target="_blank" href="{{url}}" class="project--info">
         <strong class="project--title">{{title}}</strong>
         <p>{{description}}</p>
       </a>
